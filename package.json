@@ -1,0 +1,19 @@
+{
+  "name": "silver-octo-journey",
+  "version": "1.0.0",
+  "main": "cli.js",
+  "repository": "https://github.com/abcdefghiraj/silver-octo-journey.git",
+  "author": "Abhiraj",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:lint": "./node_modules/.bin/eslint"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^28.1.3"
+  }
+}
