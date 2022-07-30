@@ -7,11 +7,14 @@ const filePath = process.argv.slice(2)[0];
 const parse = csv.parse({ headers: true })
   .transform(parseRow);
 
-const format = csv.format({ headers: true, quoteColumns: { json: true } })
+const format = csv.format({ headers: true, quoteColumns: { json: true }, quoteHeaders: false })
   .transform(formatRow);
 
 fs.createReadStream(filePath)
   .pipe(parse)
+  .on('error', () => {
+    // Do nothing
+  })
   .pipe(format)
   .on('error', () => {
     // Do nothing
